@@ -21,4 +21,49 @@ export default function ManageScreen({ navigation }) {
     setCourse("Starters");
   };
 
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Manage Menu</Text>
 
+      <TextInput
+        style={styles.input}
+        placeholder="Dish Name"
+        value={name}
+        onChangeText={setName}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Price"
+        keyboardType="numeric"
+        value={price}
+        onChangeText={setPrice}
+      />
+
+      <Picker
+        selectedValue={course}
+        style={styles.input}
+        onValueChange={(itemValue) => setCourse(itemValue)}
+      >
+        <Picker.Item label="Starters" value="Starters" />
+        <Picker.Item label="Mains" value="Mains" />
+        <Picker.Item label="Dessert" value="Dessert" />
+      </Picker>
+
+      <Button title="Add Dish" onPress={handleAdd} />
+
+      <Text style={styles.sub}>Current Menu</Text>
+      <FlatList
+        data={menu}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.rowCard}>
+            <Text>{item.name} • {item.course} • R {item.price}</Text>
+            <Button title="Delete" onPress={() => removeItem(item.id)} />
+          </View>
+        )}
+      />
+
+      <Button title="Go to Filter" onPress={() => navigation.navigate("Filter")} />
+    </SafeAreaView>
+  );
+}
