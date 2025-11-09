@@ -6,4 +6,20 @@ export default StyleSheet.create({
   title: { fontSize: 22, fontWeight: "bold", textAlign: "center", marginBottom: 10 },
   sub: { textAlign: "center", marginVertical: 10 },
   row: { flexDirection: "row", justifyContent: "space-around", marginBottom: 20 },
+  card: {
+    backgroundColor: "#fff",
+    padding: 12,
+    marginBottom: 10,
+    borderRadius: 10,
+    elevation: 3,
+  },
+  rowCard: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    padding: 12,
+    marginBottom: 8,
+    borderRadius: 10,
+    elevation: 2,
   
