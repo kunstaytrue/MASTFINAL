@@ -34,4 +34,23 @@ export default StyleSheet.create({
     borderRadius: 6,
     backgroundColor: "#fff",
   },
+  desc: {
+  fontSize: 14,
+  color: "#555",
+  marginVertical: 4,
+},
+statsBox: {
+  backgroundColor: "#fff",
+  padding: 12,
+  borderRadius: 10,
+  marginVertical: 10,
+  elevation: 2,
+},
+statText: {
+  fontSize: 16,
+  color: "#333",
+  marginVertical: 2,
+},
+
+
 });
