@@ -34,4 +34,10 @@ export default StyleSheet.create({
     borderRadius: 6,
     backgroundColor: "#fff",
   },
+  desc: {
+  fontSize: 14,
+  color: "#555",
+  marginVertical: 4,
+},
+
 });
