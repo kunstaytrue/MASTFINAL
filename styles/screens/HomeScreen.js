@@ -15,6 +15,14 @@ export default function HomeScreen({ navigation }) {
 
       <Text style={styles.title}>Menu</Text>
       <Text style={styles.sub}>Total items: {menu.length}</Text>
+ 
+<Text style={styles.sub}>
+  Average price: R{" "}
+  {menu.length > 0
+    ? (menu.reduce((sum, item) => sum + item.price, 0) / menu.length).toFixed(2)
+    : 0}
+</Text>
+
 
       <FlatList
         data={menu}
