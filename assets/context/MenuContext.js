@@ -4,9 +4,9 @@ const MenuContext = createContext();
 
 export function MenuProvider({ children }) {
   const [menu, setMenu] = useState([
-    { id: "1", name: "Chicken Wings", course: "Starters", price: 80 },
-    { id: "2", name: "Beef Steak", course: "Mains", price: 150 },
-    { id: "3", name: "Chocolate Cake", course: "Dessert", price: 60 },
+    { id: "1", name: "Chicken Wings", course: "Starters",description:"Crispy, deep-fried wings tossed in a tangy and spicy buffalo sauce, served with a side of cool ranch for dipping" , price: 80 },
+    { id: "2", name: "Beef Steak", course: "Mains",description:"a prepared, thick-cut of beef, cooked to your preference and featuring a savory, seared crust with a juicy interior", price: 150 },
+    { id: "3", name: "Chocolate Cake", course: "Dessert",description:"a rich, moist texture and intense chocolate flavor, while highlighting any unique elements like special frosting or premium ingredients", price: 60 },
   ]);
 
   const addItem = (item) => {

@@ -22,4 +22,35 @@ export default StyleSheet.create({
     marginBottom: 8,
     borderRadius: 10,
     elevation: 2,
-  
+  },
+  dish: { fontSize: 18, fontWeight: "600" },
+  course: { color: "#333", fontSize: 14, marginTop: 2 },
+  price: { color: "#007BFF", fontWeight: "bold", marginTop: 2 },
+  input: {
+    borderWidth: 1,
+    borderColor: "#aaa",
+    padding: 8,
+    marginBottom: 12,
+    borderRadius: 6,
+    backgroundColor: "#fff",
+  },
+  desc: {
+  fontSize: 14,
+  color: "#555",
+  marginVertical: 4,
+},
+statsBox: {
+  backgroundColor: "#fff",
+  padding: 12,
+  borderRadius: 10,
+  marginVertical: 10,
+  elevation: 2,
+},
+statText: {
+  fontSize: 16,
+  color: "#333",
+  marginVertical: 2,
+},
+
+
+});

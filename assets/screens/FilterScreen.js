@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text, FlatList, View, Button } from "react-native";
+import {
+  SafeAreaView,
+  View,
+  Text,
+  FlatList,
+  Button,
+} from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { useMenu } from "../context/MenuContext";
 import styles from "../styles/styles";
@@ -30,6 +36,9 @@ export default function FilterScreen({ navigation }) {
         renderItem={({ item }) => (
           <View style={styles.card}>
             <Text style={styles.dish}>{item.name}</Text>
+            {item.description ? (
+              <Text style={styles.desc}>{item.description}</Text>
+            ) : null}
             <Text style={styles.course}>{item.course}</Text>
             <Text style={styles.price}>R {item.price}</Text>
           </View>
